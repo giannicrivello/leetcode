@@ -1,0 +1,47 @@
+twosums_bruteforce.c:6:40: error: expected ')'
+        int *result = (int*)malloc(sizeof(int*2));
+                                              ^
+twosums_bruteforce.c:6:35: note: to match this '('
+        int *result = (int*)malloc(sizeof(int*2));
+                                         ^
+twosums_bruteforce.c:7:6: error: redefinition of 'returnSize' with a different type: 'int' vs 'int *'
+        int returnSize = 2;
+            ^
+twosums_bruteforce.c:5:55: note: previous definition is here
+int* TwoSums(int* nums, int numSize, int target, int* returnSize){
+                                                      ^
+twosums_bruteforce.c:12:20: error: use of undeclared identifier 'i'
+                for(int j=0; j < i+1; j++){
+                                 ^
+twosums_bruteforce.c:14:5: error: use of undeclared identifier 'results'; did you mean 'result'?
+                                results[0] = i;
+                                ^~~~~~~
+                                result
+twosums_bruteforce.c:6:7: note: 'result' declared here
+        int *result = (int*)malloc(sizeof(int*2));
+             ^
+twosums_bruteforce.c:14:18: error: use of undeclared identifier 'i'
+                                results[0] = i;
+                                             ^
+twosums_bruteforce.c:15:5: error: use of undeclared identifier 'results'; did you mean 'result'?
+                                results[1] = j;
+                                ^~~~~~~
+                                result
+twosums_bruteforce.c:6:7: note: 'result' declared here
+        int *result = (int*)malloc(sizeof(int*2));
+             ^
+twosums_bruteforce.c:21:28: error: use of undeclared identifier 'results'; did you mean 'result'?
+                printf("%d, target: %d", results[i], target);
+                                         ^~~~~~~
+                                         result
+twosums_bruteforce.c:6:7: note: 'result' declared here
+        int *result = (int*)malloc(sizeof(int*2));
+             ^
+twosums_bruteforce.c:31:33: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'int *'; take the address with & [-Wint-conversion]
+        TwoSums(nums, numSize, target, returnSize);
+                                       ^~~~~~~~~~
+                                       &
+twosums_bruteforce.c:5:55: note: passing argument to parameter 'returnSize' here
+int* TwoSums(int* nums, int numSize, int target, int* returnSize){
+                                                      ^
+1 warning and 7 errors generated.
